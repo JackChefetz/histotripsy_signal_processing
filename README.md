@@ -16,4 +16,4 @@ Sunny Taylor (sunnyt@uchicago.edu)
 
 Abigail Pavlicek (pavliceka@uchicago.edu)
 
-Jack Chefetz (jchefetz@uchicago.edu
+Jack Chefetz (jchefetz@uchicago.edu)
