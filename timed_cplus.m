@@ -113,18 +113,24 @@ end
 figure(103);
 hold on;
 runs = 1:numRuns;
-plot(runs, loadTimes, '-o', 'DisplayName', 'Load Time');
-plot(runs, samplingTimes, '-o', 'DisplayName', 'Sampling Frequency Adjustment Time');
-plot(runs, imageProcessingTimes, '-o', 'DisplayName', 'Image Processing Time');
-plot(runs, timeCalcTimes, '-o', 'DisplayName', 'Absolute Time Calculation Time');
-plot(runs, matchedFilterTimes, '-o', 'DisplayName', 'Matched Filter Application Time');
-plot(runs, bubbleCloudTimes, '-o', 'DisplayName', 'Bubble Cloud Analysis Time');
-plot(runs, plotTimes, '-o', 'DisplayName', 'Plotting Time');
-plot(runs, fitTimes, '-o', 'DisplayName', 'Power Law Fit Time');
-plot(runs, totalTimes - plotTimes, '-o', 'DisplayName', 'Total Time (excluding plotting)');
-plot(runs, totalTimes, '-o', 'DisplayName', 'Total Time');
+% Define color order (5 colors)
+colors = lines(5);
 
-% Format the plot
+% Plot each timing category
+hold on;
+plot(runs, loadTimes, '-o', 'DisplayName', 'Load Time', 'LineWidth', 2, 'Color', colors(1,:), 'LineStyle', '--');
+plot(runs, samplingTimes, '-o', 'DisplayName', 'Sampling Frequency Adjustment Time', 'LineWidth', 2, 'Color', colors(2,:), 'LineStyle', '--');
+plot(runs, imageProcessingTimes, '-o', 'DisplayName', 'Image Processing Time', 'LineWidth', 2, 'Color', colors(3,:), 'LineStyle', '--');
+plot(runs, timeCalcTimes, '-o', 'DisplayName', 'Absolute Time Calculation Time', 'LineWidth', 2, 'Color', colors(4,:), 'LineStyle', '--');
+plot(runs, matchedFilterTimes, '-o', 'DisplayName', 'Matched Filter Application Time', 'LineWidth', 2, 'Color', colors(5,:), 'LineStyle', '--');
+
+plot(runs, bubbleCloudTimes, '-o', 'DisplayName', 'Bubble Cloud Analysis Time', 'LineWidth', 2, 'Color', colors(1,:), 'LineStyle', '-');
+plot(runs, plotTimes, '-o', 'DisplayName', 'Plotting Time', 'LineWidth', 2, 'Color', colors(2,:), 'LineStyle', '-');
+plot(runs, fitTimes, '-o', 'DisplayName', 'Power Law Fit Time', 'LineWidth', 2, 'Color', colors(3,:), 'LineStyle', '-');
+plot(runs, totalTimes - plotTimes - fitTimes, '-o', 'DisplayName', 'Total Time (excluding plotting and fitting)', 'LineWidth', 2, 'Color', colors(4,:), 'LineStyle', '-');
+plot(runs, totalTimes, '-o', 'DisplayName', 'Total Time', 'LineWidth', 2, 'Color', colors(5,:), 'LineStyle', '-');
+
+% Formatting the plot
 xlabel('Run Number');
 ylabel('Time (seconds)');
 title('Timing Results for Each Run');
