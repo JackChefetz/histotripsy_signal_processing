@@ -9,6 +9,7 @@ numRuns = 10;
 loadTimesStep1 = zeros(1, numRuns);
 loadTimesStep2 = zeros(1, numRuns);
 loadTimesStep3 = zeros(1, numRuns);
+totalTimes = zeros(1, numRuns);
 
 for runIdx = 1:numRuns
     % Start total timer
@@ -20,7 +21,7 @@ for runIdx = 1:numRuns
     Trans = Zzz.Trans;
     P = Zzz.P;
     Receive3 = Zzz.Receive3;
-    tw1 = Zzz.TW(1).Waveform
+    tw1 = Zzz.TW(1).Waveform;
     loadTimesStep1(runIdx) = toc(loadTimeStep1Start);
     
     %% Step 2: Loading 'SH_Chirp_2024March22.mat'
@@ -29,10 +30,9 @@ for runIdx = 1:numRuns
     tw2 = tw2.TW.Waveform;
     loadTimesStep2(runIdx) = toc(loadTimeStep2Start);
     
-    %% Step 3: Loading 'UFData_Agarose_dataset_1.mat'
+    %% Step 3: Loading 'UFData_Agarose_dataset_1.mat' using MEX
     loadTimeStep3Start = tic;
-    filename = ['UFData_Agarose_dataset_1', '.mat'];
-    y = load(filename);
+    y = loading();  % Call the MEX file to load the data
     loadTimesStep3(runIdx) = toc(loadTimeStep3Start);
     
     % Store total time (combine load steps)
