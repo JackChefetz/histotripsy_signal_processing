@@ -119,22 +119,23 @@ colors = lines(5);
 % Plot each timing category
 hold on;
 plot(runs, loadTimes, '-o', 'DisplayName', 'Load Time', 'LineWidth', 2, 'Color', colors(1,:), 'LineStyle', '--');
-plot(runs, samplingTimes, '-o', 'DisplayName', 'Sampling Frequency Adjustment Time', 'LineWidth', 2, 'Color', colors(2,:), 'LineStyle', '--');
-plot(runs, imageProcessingTimes, '-o', 'DisplayName', 'Image Processing Time', 'LineWidth', 2, 'Color', colors(3,:), 'LineStyle', '--');
-plot(runs, timeCalcTimes, '-o', 'DisplayName', 'Absolute Time Calculation Time', 'LineWidth', 2, 'Color', colors(4,:), 'LineStyle', '--');
+%plot(runs, samplingTimes, '-o', 'DisplayName', 'Sampling Frequency Adjustment Time', 'LineWidth', 2, 'Color', colors(2,:), 'LineStyle', '--');
+%plot(runs, imageProcessingTimes, '-o', 'DisplayName', 'Image Processing Time', 'LineWidth', 2, 'Color', colors(3,:), 'LineStyle', '--');
+%plot(runs, timeCalcTimes, '-o', 'DisplayName', 'Absolute Time Calculation Time', 'LineWidth', 2, 'Color', colors(4,:), 'LineStyle', '--');
 plot(runs, matchedFilterTimes, '-o', 'DisplayName', 'Matched Filter Application Time', 'LineWidth', 2, 'Color', colors(5,:), 'LineStyle', '--');
 
-plot(runs, bubbleCloudTimes, '-o', 'DisplayName', 'Bubble Cloud Analysis Time', 'LineWidth', 2, 'Color', colors(1,:), 'LineStyle', '-');
-plot(runs, plotTimes, '-o', 'DisplayName', 'Plotting Time', 'LineWidth', 2, 'Color', colors(2,:), 'LineStyle', '-');
-plot(runs, fitTimes, '-o', 'DisplayName', 'Power Law Fit Time', 'LineWidth', 2, 'Color', colors(3,:), 'LineStyle', '-');
-plot(runs, totalTimes - plotTimes - fitTimes, '-o', 'DisplayName', 'Total Time (excluding plotting and fitting)', 'LineWidth', 2, 'Color', colors(4,:), 'LineStyle', '-');
-plot(runs, totalTimes, '-o', 'DisplayName', 'Total Time', 'LineWidth', 2, 'Color', colors(5,:), 'LineStyle', '-');
+%plot(runs, bubbleCloudTimes, '-o', 'DisplayName', 'Bubble Cloud Analysis Time', 'LineWidth', 2, 'Color', colors(1,:), 'LineStyle', '-');
+%plot(runs, plotTimes, '-o', 'DisplayName', 'Plotting Time', 'LineWidth', 2, 'Color', colors(2,:), 'LineStyle', '-');
+plot(runs, fitTimes, '-o', 'DisplayName', 'Power Law Fit Time', 'LineWidth', 2, 'Color', colors(3,:), 'LineStyle', '--');
+%plot(runs, totalTimes - plotTimes - fitTimes, '-o', 'DisplayName', 'Total Time (excluding plotting and fitting)', 'LineWidth', 2, 'Color', colors(4,:), 'LineStyle', '-');
+plot(runs, totalTimes, '-o', 'DisplayName', 'Total Time', 'LineWidth', 2, 'Color', colors(2,:), 'LineStyle', '-');
 
 % Formatting the plot
 xlabel('Run Number');
 ylabel('Time (seconds)');
 title('Timing Results for Each Run');
 legend('Location', 'northwest');
-ylim([0 0.2]);
+ylim([0.0001,10]);
+set(gca, 'YScale', 'log'); % Set y-axis to log scale
 grid on;
 hold off;
