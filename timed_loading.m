@@ -48,15 +48,16 @@ runs = 1:numRuns;
 colors = lines(5);
 
 % Plot each loading step timing
-plot(runs, loadTimesStep1, '-o', 'DisplayName', 'Load Step 1 (SetUpC5 2v)', 'LineWidth', 2, 'Color', colors(1,:));
-plot(runs, loadTimesStep2, '-o', 'DisplayName', 'Load Step 2 (SH Chirp)', 'LineWidth', 2, 'Color', colors(2,:));
-plot(runs, loadTimesStep3, '-o', 'DisplayName', 'Load Step 3 (UFData Agarose)', 'LineWidth', 2, 'Color', colors(3,:));
+plot(runs, loadTimesStep1, '-o', 'DisplayName', 'Setup File', 'LineWidth', 2, 'Color', colors(1,:));
+plot(runs, loadTimesStep2, '-o', 'DisplayName', 'Synthetic Waveform', 'LineWidth', 2, 'Color', colors(2,:));
+plot(runs, loadTimesStep3, '-o', 'DisplayName', 'Live Data', 'LineWidth', 2, 'Color', colors(3,:));
 
 % Formatting the plot
 xlabel('Run Number');
 ylabel('Time (seconds)');
 title('Loading Time for Each Step');
-legend('Location', 'northwest');
-ylim([0 0.1]);
+legend('Location', 'northeast');
+ylim([0.0001,1]);
+set(gca, 'YScale', 'log'); % Set y-axis to log scale
 grid on;
 hold off;
