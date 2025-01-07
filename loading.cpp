@@ -8,7 +8,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[]) {
     }
 
     // Define MAT file name (hardcoded)
-    const char *filename = "UFData_Agarose_dataset_1.mat";
+    const char *filename = "Fall Data/UFData_Agarose_dataset_1.mat";
     
     // Open the MAT file
     MATFile *pmat = matOpen(filename, "r");

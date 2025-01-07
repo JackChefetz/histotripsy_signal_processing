@@ -2,8 +2,6 @@
 
 Next Meeting: Friday 12/6 1pm
 
-Presentation: Tuesday 12/10 3pm
-
 # People
 
 Mentors:
