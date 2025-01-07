@@ -3,16 +3,16 @@ clear all
 clc
 
 %% loading relevant data files
-Zzz= load('SetUpC5_2v_ChirpPCI_2024April29.mat');
+Zzz = load(fullfile('Setup Data', 'SetUpC5_2v_ChirpPCI_2024April29.mat'));
 Trans = Zzz.Trans;
 P = Zzz.P;
 Receive3 = Zzz.Receive3;
 
 tw1 = Zzz.TW(1).Waveform;
-tw2 = load('SH_Chirp_2024March22.mat'); % loading synthetic waveform used for transmitting fundamental
+tw2 = load(fullfile('Setup Data', 'SH_Chirp_2024March22.mat')); % loading synthetic waveform used for transmitting fundamental
 tw2 = tw2.TW.Waveform; % transmit waveform is in the TW structure 
 
-filename = ['UFData_Agarose_dataset_1', '.mat'];
+filename = fullfile('Fall Data', 'UFData_Agarose_dataset_1.mat');
 y = load(filename);
 
 % sampling frequency of acquired RF data (For verasonics, if Recieve structure has 'sample mode' = 'NS200BW', then it means fs = 4*Trans_center_frequency.

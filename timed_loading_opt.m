@@ -17,7 +17,7 @@ for runIdx = 1:numRuns
     
     %% Step 1: Loading 'SetUpC5_2v_ChirpPCI_2024April29.mat'
     loadTimeStep1Start = tic;
-    Zzz = load('SetUpC5_2v_ChirpPCI_2024April29.mat');
+    Zzz = load(fullfile('Setup Data', 'SetUpC5_2v_ChirpPCI_2024April29.mat'));
     Trans = Zzz.Trans;
     P = Zzz.P;
     Receive3 = Zzz.Receive3;
@@ -26,7 +26,7 @@ for runIdx = 1:numRuns
     
     %% Step 2: Loading 'SH_Chirp_2024March22.mat'
     loadTimeStep2Start = tic;
-    tw2 = load('SH_Chirp_2024March22.mat');  % loading synthetic waveform
+    tw2 = load(fullfile('Setup Data', 'SH_Chirp_2024March22.mat')); % loading synthetic waveform
     tw2 = tw2.TW.Waveform;
     loadTimesStep2(runIdx) = toc(loadTimeStep2Start);
     
