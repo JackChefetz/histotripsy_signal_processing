@@ -13,7 +13,7 @@ tw2 = load(fullfile('Setup Data', 'SH_Chirp_2024March22.mat')); % loading synthe
 tw2 = tw2.TW.Waveform; % transmit waveform is in the TW structure 
 
 %filename = fullfile('Fall Data', 'UFData_Agarose_dataset_1.mat');
-filename = fullfile('Winter Data', 'UFData_TT_1_dataset_11.mat');
+filename = fullfile('Winter Data', 'UFData_TT_1_dataset_18.mat');
 y = load(filename);
 
 % sampling frequency of acquired RF data (For verasonics, if Recieve structure has 'sample mode' = 'NS200BW', then it means fs = 4*Trans_center_frequency.
@@ -49,23 +49,23 @@ time = (1:double(ptsd))*(1/Fs) + 2*Receive3(64).startDepth/(Trans.frequency*1e6)
 
 %% Apply matched filter to waveforms
 
-fwfm = zeros(ptsd, 10);
-for idx = 1:10
+fwfm = zeros(ptsd, P.numAcqs);
+for idx = 1:P.numAcqs
     fwfm(:, idx) = conv2(y.RData((idx-1)*ptsd+(1:ptsd),64)', fliplr(w2),'same')';
 end
 
 figure(101)
 subplot(3, 1, 1)
 plot(time*1e6, fwfm(:, 1))
-title('0 ms')
+title('0 ms???')
 
 subplot(3, 1, 2)
-plot(time*1e6, fwfm(:, 5))
-title('5 ms')
+plot(time*1e6, fwfm(:, P.numAcqs/2))
+title('5 ms???')
 
 subplot(3, 1, 3)
-plot(time*1e6, fwfm(:, 10))
-title('10 ms')
+plot(time*1e6, fwfm(:, P.numAcqs))
+title('10 ms???')
 xlabel('Time (\mus)')
 
 
@@ -75,9 +75,9 @@ width = 5;  %[mm] FWHM of focual width
 tdx = find(1e6*time > 2*(focus - width/2)/1.54 & 1e6*time< 2*(focus + width/2)/1.54); %Time indicies for bubble activity within focus (5 mm length)
 
 % Calculate integrated signal within tdx for each frame
-intGS = zeros(1, 10);   % Preallocate to assign integrated signal for each frame
+intGS = zeros(1, P.numAcqs);   % Preallocate to assign integrated signal for each frame
 
-for idx = 1:10
+for idx = 1:P.numAcqs
     temp = fwfm(:, idx).^2;
     intGS(idx) = sum(temp(tdx));
 end
@@ -85,15 +85,15 @@ end
 
 % Now plot data
 figure(102)
-plot(1:10, intGS/intGS(1), '.', 'MarkerSize', 20)
+plot(1:P.numAcqs, intGS/intGS(1), '.', 'MarkerSize', 20)
 xlabel('Time (ms)')
 ylabel('Integrated Signal (AU)')
 
 % Maybe do power law
-[efit gof] = fit((1:10)', intGS'/intGS(1),'power1')
+[efit gof] = fit((1:P.numAcqs)', intGS'/intGS(1),'power1')
 
 hold on
-plot(1:10, feval(efit, 1:10), '--r')
+plot(1:P.numAcqs, feval(efit, 1:P.numAcqs), '--r')
 
 
 
