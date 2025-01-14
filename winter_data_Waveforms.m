@@ -3,7 +3,7 @@ clear all
 clc
 
 %% loading relevant data files
-Zzz = load(fullfile('Setup Data', 'SetUpC5_2v_ChirpPCI_2024April29.mat'));
+Zzz = load(fullfile('Setup Data', 'SetUpC5_2v_ChirpPCI_PME.mat'));
 Trans = Zzz.Trans;
 P = Zzz.P;
 Receive3 = Zzz.Receive3;
@@ -16,10 +16,13 @@ tw2 = tw2.TW.Waveform; % transmit waveform is in the TW structure
 dataFiles = dir(fullfile('Winter Data', 'UFData_TT_1_dataset_*.mat'));
 
 % Ensure the directory for saving figures exists
-outputDir = 'Saved_Figures';
+outputDir = 'Figs_WinterWk2';
 if ~exist(outputDir, 'dir')
     mkdir(outputDir);
 end
+
+% Length of data
+lenData = 14;
 
 % sampling frequency of acquired RF data
 Fs = 250/18 * 1e6 ;
@@ -50,8 +53,8 @@ for fileIdx = 1:length(dataFiles)
     time = (1:double(ptsd))*(1/Fs) + 2*Receive3(64).startDepth/(Trans.frequency*1e6);
 
     %% Apply matched filter to waveforms
-    fwfm = zeros(ptsd, 10);
-    for idx = 1:10
+    fwfm = zeros(ptsd, lenData);
+    for idx = 1:lenData
         fwfm(:, idx) = conv2(y.RData((idx-1)*ptsd+(1:ptsd),64)', fliplr(w2),'same')';
     end
 
@@ -82,23 +85,22 @@ for fileIdx = 1:length(dataFiles)
     tdx = find(1e6*time > 2*(focus - width/2)/1.54 & 1e6*time < 2*(focus + width/2)/1.54); % Time indices for bubble activity within focus
 
     % Calculate integrated signal within tdx for each frame
-    intGS = zeros(1, 10);   % Preallocate to assign integrated signal for each frame
-
-    for idx = 1:10
+    intGS = zeros(1,lenData);   % Preallocate to assign integrated signal for each frame
+    for idx = 1:lenData
         temp = fwfm(:, idx).^2;
         intGS(idx) = sum(temp(tdx));
     end
 
     % Plot integrated signal
     figure;
-    plot(1:10, intGS/intGS(1), '.', 'MarkerSize', 20)
+    plot(1:lenData, intGS/intGS(1), '.', 'MarkerSize', 20)
     xlabel('Time (ms)')
     ylabel('Integrated Signal (AU)')
 
     % Fit power law
-    [efit, gof] = fit((1:10)', intGS'/intGS(1), 'power1');
+    [efit, gof] = fit((1:lenData)', intGS'/intGS(1), 'power1');
     hold on
-    plot(1:10, feval(efit, 1:10), '--r')
+    plot(1:lenData, feval(efit, 1:lenData), '--r')
 
     % Save the figure to the output directory
     saveas(gcf, fullfile(outputDir, sprintf('Fig_Integrated_Signal_%d.png', fileIdx)));
