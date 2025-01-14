@@ -5,6 +5,9 @@ clc
 % Number of runs
 numRuns = 10;
 
+% Length of data
+lenData = 14;
+
 % Initialize arrays to store timing results for each segment across all runs
 loadTimes = zeros(1, numRuns);
 samplingTimes = zeros(1, numRuns);
@@ -22,7 +25,8 @@ for runIdx = 1:numRuns
     % Sub-timer for loading data
     loadTimeStart = tic;
     %% loading relevant data files
-    Zzz = load(fullfile('Setup Data', 'SetUpC5_2v_ChirpPCI_2024April29.mat'));
+    %Zzz = load(fullfile('Setup Data', 'SetUpC5_2v_ChirpPCI_2024April29.mat'));
+    Zzz = load(fullfile('Setup Data','SetUpC5_2v_ChirpPCI_PME.mat'));
     Trans = Zzz.Trans;
     P = Zzz.P;
     Receive3 = Zzz.Receive3;
@@ -31,7 +35,7 @@ for runIdx = 1:numRuns
     tw2 = load(fullfile('Setup Data', 'SH_Chirp_2024March22.mat')); % loading synthetic waveform used for transmitting fundamental
     tw2 = tw2.TW.Waveform; % transmit waveform is in the TW structure 
 
-    filename = fullfile('Fall Data', 'UFData_Agarose_dataset_1.mat');
+    filename = fullfile('Winter Data', 'UFData_TT_1_dataset_8.mat');
     y = load(filename);
     loadTimes(runIdx) = toc(loadTimeStart);
 
@@ -71,8 +75,8 @@ for runIdx = 1:numRuns
     % Sub-timer for matched filter application
     matchedFilterTimeStart = tic;
     %% Apply matched filter to waveforms
-    fwfm = zeros(ptsd, 10);
-    for idx = 1:10
+    fwfm = zeros(ptsd, lenData);
+    for idx = 1:lenData
         fwfm(:, idx) = conv2(y.RData((idx-1) * ptsd + (1:ptsd), 64)', fliplr(w2), 'same')';
     end
     matchedFilterTimes(runIdx) = toc(matchedFilterTimeStart);
@@ -85,8 +89,8 @@ for runIdx = 1:numRuns
     tdx = find(1e6 * time > 2 * (focus - width / 2) / 1.54 & 1e6 * time < 2 * (focus + width / 2) / 1.54);
 
     % Calculate integrated signal within tdx for each frame
-    intGS = zeros(1, 10);
-    for idx = 1:10
+    intGS = zeros(1, lenData);
+    for idx = 1:lenData
         temp = fwfm(:, idx).^2;
         intGS(idx) = sum(temp(tdx));
     end
@@ -110,7 +114,7 @@ for runIdx = 1:numRuns
     xlabel('Time (\mus)')
 
     figure(102)
-    plot(1:10, intGS / intGS(1), '.', 'MarkerSize', 20)
+    plot(1:lenData, intGS / intGS(1), '.', 'MarkerSize', 20)
     xlabel('Time (ms)')
     ylabel('Integrated Signal (AU)')
     plotTimes(runIdx) = toc(plotTimeStart);
@@ -118,9 +122,14 @@ for runIdx = 1:numRuns
     % Sub-timer for fitting
     fitTimeStart = tic;
     % Power law fit
-    [efit, gof] = fit((1:10)', intGS' / intGS(1), 'power1');
+    % switching to cpp power law fit for timing purposes
+    %[efit, gof] = fit((1:10)', intGS' / intGS(1), 'power1');
+    params = speedy_power_fit((1:lenData)', intGS'/intGS(1));
     hold on
-    plot(1:10, feval(efit, 1:10), '--r')
+
+    %plot(1:10, feval(efit, 1:10), '--r')
+    fit_values = params(1) * (1:lenData)'.^params(2);
+    plot(1:lenData, fit_values, '--r')
     fitTimes(runIdx) = toc(fitTimeStart);
 
 
@@ -174,7 +183,7 @@ figure(103);
 hold on;
 
 % Run numbers
-runs = 1:10;
+runs = 1:numRuns;
 
 % Define color order (5 colors)
 colors = lines(5);
