@@ -1,6 +1,6 @@
 # Histotripsy Signal Processing
 
-Next Meeting: Friday 12/6 1pm
+Next Meeting: Monday 1/14 4pm
 
 # People
 
