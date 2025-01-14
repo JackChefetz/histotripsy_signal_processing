@@ -35,7 +35,7 @@ for runIdx = 1:numRuns
     tw2 = load(fullfile('Setup Data', 'SH_Chirp_2024March22.mat')); % loading synthetic waveform used for transmitting fundamental
     tw2 = tw2.TW.Waveform; % transmit waveform is in the TW structure 
 
-    filename = fullfile('Winter Data', 'UFData_TT_1_dataset_8.mat');
+    filename = fullfile('Winter Data', 'UFData_TT_1_dataset_18.mat');
     y = load(filename);
     loadTimes(runIdx) = toc(loadTimeStart);
 
@@ -117,6 +117,7 @@ for runIdx = 1:numRuns
     plot(1:lenData, intGS / intGS(1), '.', 'MarkerSize', 20)
     xlabel('Time (ms)')
     ylabel('Integrated Signal (AU)')
+    ylim([0 1.5])
     plotTimes(runIdx) = toc(plotTimeStart);
 
     % Sub-timer for fitting
