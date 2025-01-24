@@ -64,5 +64,5 @@ end
 
 %%% c++ power law fit
 params = speedy_power_fit((1:lenData)', intGS'/intGS(1));
-thresh_time = params(1) * (1:lenData)'.^params(2);
+ttp = params(1) * (1:lenData)'.^params(2);
 
