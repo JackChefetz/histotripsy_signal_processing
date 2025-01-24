@@ -14,8 +14,6 @@ tw1 = Zzz.TW(1).Waveform;
 tw2 = load(fullfile('Setup Data', 'SH_Chirp_2024March22.mat')); % loading synthetic waveform used for transmitting fundamental
 tw2 = tw2.TW.Waveform; % transmit waveform is in the TW structure 
 
-% Get all filenames in Winter Data folder for 'UFData_TT_1_dataset_*.mat'
-dataFiles = dir(fullfile('Winter Data', 'UFData_TT_1_dataset_*.mat'));
 
 % Length of data
 lenData = 14;
@@ -63,9 +61,8 @@ for idx = 1:lenData
     intGS(idx) = sum(temp(tdx));
 end
 
-% Fit power law
-[efit, gof] = fit((1:lenData)', intGS'/intGS(1), 'power1');
-hold on
-plot(1:lenData, feval(efit, 1:lenData), '--r')
 
-end
+%%% c++ power law fit
+params = speedy_power_fit((1:lenData)', intGS'/intGS(1));
+thresh_time = params(1) * (1:lenData)'.^params(2);
+
