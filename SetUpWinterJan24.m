@@ -266,6 +266,7 @@ Process(4).Parameters = {'srcbuffer','image',...
     'srcframenum',0,... %0 or -1?
     'dstbuffer','none'};
 
+% HERE
 % add external process 5
 Process(5).classname = 'External';
 Process(5).method = 'DissolutionTime';
@@ -445,12 +446,11 @@ UI(11).Callback = {'assignin(''base'',''move_UR'',UIState);'};
 % UI(12).Control = {'UserB5','Style','VsToggleButton','Label','Save Baseline'};
 % UI(12).Callback = {'assignin(''base'',''ftdata'',UIState);'};
 
-add here
-
 % Save the external functions defined in this file
 EF(1).Function = text2cell('%-EF#1');
 EF(2).Function = text2cell('%-EF#2');
 EF(3).Function = text2cell('%-EF#3');
+% HERE
 EF(4).Function = text2cell('%-EF#4');
 
 
@@ -472,7 +472,7 @@ return
 %filename = 'C5-2v_128RyLns';  VSX;
 
 %% External functions with process object
-HERE
+
 %-EF#1
 saveData(RData)
 
@@ -519,6 +519,7 @@ end
 return
 %-EF#3
 
+% HERE
 %-EF#4
 DissolutionTime(RData)
 
