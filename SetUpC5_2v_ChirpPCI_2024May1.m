@@ -442,6 +442,15 @@ Process(4).Parameters = {'srcbuffer','receive',...
     'srcframenum',0,...
     'dstbuffer','none'};
 
+% HERE
+% External Process to calculate Dissolution Time
+Process(5).classname = 'External';
+Process(5).method = 'DissolutionTime';
+Process(5).Parameters = {'srcbuffer','receive',...
+    'srcbufnum',4,...
+    'srcframenum',0,...
+    'dstbuffer','none'};
+
 
 %% ---------------------------SEQCONTROL-----------------------------------
 %Specify SeqControl structyure arrays.
@@ -645,6 +654,10 @@ UI(6).Control = {'UserB5', 'Style', 'VsToggleButton', 'Label', 'PCI/UF'};
 UI(6).Callback = {'assignin(''base'',''pcidata'',UIState);'};
 % 
 
+% HERE
+UI(7).Control = {'UserC6', 'Style', 'VsPushButton', 'Label', 'DissolutionTime'};
+UI(7).Callback = {'assignin(''base'',''DissolutionTime'',true);'};
+
 % %% ----------------External Function References-----------------------
 % % Save the external functions defined in this file
 % EF(1).Function = text2cell('%-EF#1');
@@ -664,9 +677,15 @@ UI(6).Callback = {'assignin(''base'',''pcidata'',UIState);'};
 
 
 %% ----------------External Function References----------------------- v2
-for n = 1 %:3
-    EF(n).Function = text2cell(['%-EF#' num2str(n)]);
-end
+%for n = 1 %:3
+%    EF(n).Function = text2cell(['%-EF#' num2str(n)]);
+%end
+%HERE
+EF(1).Function = text2cell('%-EF#1');
+EF(2).Function = text2cell('%-EF#2');
+EF(3).Function = text2cell('%-EF#3');
+EF(4).Function = text2cell('%-EF#4');
+
 
 % Specify factor for converting sequenceRate to frameRate.
 frameRateFactor = 5;
@@ -761,6 +780,31 @@ else
 end
 return
 %-EF#3
+
+%HERE
+%-EF#4
+DissolutionTime(ufData)
+
+DissolutionTime = evalin('base', 'DissolutionTime');
+if DissolutionTime
+    UFData = evalin('base', 'UFData');
+ %   Trans = evalin('base', 'Trans');
+ %   RData = evalin('base', 'RData');
+    speedy_processing(UFData, Trans, RData);
+else 
+    assignin('base','DissolutionTime', false);
+    assignin('base','UFData', false);
+ %   assignin('base','Trans', false);
+ %   assignin('base','RData', false);
+%     if ishandle(3) ~= 0
+%         close(3)
+    end
+ %   clear featuresOriginal validPtsOriginal fm1
+    return
+end
+    
+return
+%-EF#4
 
 %% **** Callback routines used by UIControls (UI) ****
 
