@@ -1,6 +1,8 @@
 # Histotripsy Signal Processing
 
-Winter Meetings: Tuesday 4pm
+Lab Time with Muskan: Tuesdays 3-5pm
+
+Meetings with Dr. Bader: Monday 4:30pm
 
 # People
 
