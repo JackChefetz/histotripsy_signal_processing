@@ -1,0 +1,891 @@
+
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 2.0088 * x^0.123272
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   1.9997e-07
+ 
+RUNACQ Has reported the following error:
+ 
+Undefined function 'writeable' for input arguments of type 'table'.
+ 
+Error in speedy_processing (line 113)
+writeable(resultsTable, csvname);
+ 
+Error in DissolutionTime (line 13)
+    speedy_processing(RData, PData, Trans, TW, P, Receive3);
+ 
+Error in VSX (line 3553)
+            runAcq(VSX_Control);
+ 
+Error in MuskanFeb10 (line 680)
+VSX
+Cleaning up memory allocated.
+ 
+>> MuskanFeb10
+MuskanFeb10: NOTE -- Running VSX automatically!
+ 
+TXEventCheck: A "pause", "triggerIn", or "multiSysSync" command for external trigger input was detected in Event number 261. 
+   TXEventCheck will not account for any delay that may be introduced while waiting for the trigger input. 
+TXEventCheck: A "pause", "triggerIn", or "multiSysSync" command for external trigger input was detected in Event number 263. 
+   TXEventCheck will not account for any delay that may be introduced while waiting for the trigger input. 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.6639 * x^0.128912
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+    0.0021
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.9899 * x^-0.289492
+ 
+ttpcheck =
+ 
+    'No errors!'
+ 
+ 
+ttp =
+ 
+   61.7969
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.1990 * x^0.000319
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+     0
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 3 microseconds 
+Fitting function formal: y = 1.1708 * x^0.025031
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   2.3669e-24
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 13 microseconds 
+Fitting function formal: y = 0.9579 * x^-0.115931
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.9579 * x^-0.115931
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.7680 * x^-0.605143
+ 
+ttpcheck =
+ 
+    'No errors!'
+ 
+ 
+ttp =
+ 
+   18.7513
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.1356 * x^0.140902
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   7.8930e-05
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.2593 * x^-0.120681
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.8224 * x^-0.005894
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.7912 * x^0.055000
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   2.2015e-08
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.6947 * x^0.014896
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   3.3093e-25
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.9692 * x^0.016459
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   1.1389e-31
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.8907 * x^-0.223042
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 1 microseconds 
+Fitting function formal: y = 1.2139 * x^0.270536
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+    0.0057
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.8375 * x^0.115975
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   1.4314e-04
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.1985 * x^0.058048
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   4.3413e-11
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.1648 * x^-0.112127
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.8850 * x^-0.004660
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.2766 * x^-0.182491
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.3604 * x^-0.048251
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 1 microseconds 
+Fitting function formal: y = 1.0568 * x^-0.244563
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.1043 * x^0.079577
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   7.7273e-08
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.9337 * x^-0.045544
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.1142 * x^-0.087273
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.0171 * x^-0.215720
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.1894 * x^-0.147136
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.1718 * x^-0.029275
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.1624 * x^-0.329708
+ 
+ttpcheck =
+ 
+    'No errors!'
+ 
+ 
+ttp =
+ 
+   60.8212
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.2377 * x^-0.095189
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.1303 * x^-0.094073
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 1 microseconds 
+Fitting function formal: y = 0.7927 * x^-0.171029
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.5880 * x^-0.204797
+ 
+ttpcheck =
+ 
+    'No errors!'
+ 
+ 
+ttp =
+ 
+   26.7402
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.1390 * x^-0.057084
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.0397 * x^0.164092
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   5.1340e-04
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.4223 * x^0.600558
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+    0.5658
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.3514 * x^-0.221930
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.9472 * x^-0.022988
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.8761 * x^-0.266861
+ 
+ttpcheck =
+ 
+    'No errors!'
+ 
+ 
+ttp =
+ 
+   55.4683
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 1 microseconds 
+Fitting function formal: y = 1.2633 * x^-0.188048
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 1 microseconds 
+Fitting function formal: y = 0.8753 * x^-0.216757
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.2843 * x^-0.177266
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 1 microseconds 
+Fitting function formal: y = 1.1127 * x^0.014372
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   2.4614e-40
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.9695 * x^-0.082508
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 1 microseconds 
+Fitting function formal: y = 0.6899 * x^-0.313167
+ 
+ttpcheck =
+ 
+    'No errors!'
+ 
+ 
+ttp =
+ 
+   14.2873
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 1 microseconds 
+Fitting function formal: y = 1.0676 * x^-0.135924
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.9789 * x^0.004360
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+  1.5966e-118
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 1 microseconds 
+Fitting function formal: y = 0.8376 * x^-0.101858
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.7240 * x^0.031817
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   9.4430e-13
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.0162 * x^-0.332349
+ 
+ttpcheck =
+ 
+    'No errors!'
+ 
+ 
+ttp =
+ 
+   39.2934
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.9816 * x^-0.065228
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.2506 * x^0.014618
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   3.8608e-43
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.0882 * x^-0.168271
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.7454 * x^0.184960
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+    0.0073
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 1 microseconds 
+Fitting function formal: y = 1.2631 * x^-0.303748
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 4 microseconds 
+Fitting function formal: y = 0.5630 * x^0.021611
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   2.2450e-13
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.9160 * x^-0.345095
+ 
+ttpcheck =
+ 
+    'No errors!'
+ 
+ 
+ttp =
+ 
+   25.3968
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.1747 * x^-0.427002
+ 
+ttpcheck =
+ 
+    'No errors!'
+ 
+ 
+ttp =
+ 
+   24.4530
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 1 microseconds 
+Fitting function formal: y = 0.8439 * x^0.163037
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+    0.0018
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.8353 * x^-0.080306
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.4192 * x^-0.108309
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.8313 * x^0.150929
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+    0.0012
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.9785 * x^-0.106504
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.9657 * x^0.060643
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   4.2393e-09
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.3966 * x^0.967492
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+    0.7495
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.6828 * x^-0.030676
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.3918 * x^-0.330821
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.4972 * x^-0.111168
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 3 microseconds 
+Fitting function formal: y = 1.1114 * x^-0.262982
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 1.0450 * x^-0.074746
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.8469 * x^-0.025690
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.9740 * x^0.154268
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   4.8405e-04
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.9346 * x^0.073513
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   1.9347e-07
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 2 microseconds 
+Fitting function formal: y = 0.9346 * x^0.073513
+ 
+ttpcheck =
+ 
+    'Warning: The power law fit is increasing'
+ 
+ 
+ttp =
+ 
+   1.9347e-07
+ 
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+runAcq/recon: Timeout waiting for next acquisition frame. Re-processing previous.
+Time taken by powerLawFit: 3 microseconds 
+Fitting function formal: y = 1.3686 * x^-0.232168
+ 
+ttpcheck =
+ 
+    'Warning: The time to next pulse is too long'
