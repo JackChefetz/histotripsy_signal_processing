@@ -81,14 +81,15 @@ ttp = 0;
 ttpcheck = '';
 
 % Setting thresholds
-thresh = 0.3; %intensity at which bubble is declared dissolved
-too_long = 100; %time at which ttp is unreasonably long
-min_R2 = 0.4; %discarding samples w low R^2
+dissolved = 0.3;    % intensity at which bubble is declared dissolved
+too_long = 100;     % time at which ttp is unreasonably long
+too_short = 1;      % time at which ttp is unsreasonably short
+min_R2 = 0.4;       % unacceptably low R^2
 
 
-% Check fit quality (decreasing with time and reasonable R^2)
+% Check fit quality
 try
-    extrapolatedtime = (thresh / params(1))^(1 / params(2));
+    extrapolatedtime = (dissolved / params(1))^(1 / params(2));
     if R2 < min_R2
         ttpcheck = 'Error: poor fit';
         ttp = extrapolatedtime;
@@ -96,16 +97,13 @@ try
         if params(2) < 0
             if extrapolatedtime > too_long
                 ttpcheck = 'Error: ttp is too long'
+            elseif extrapolatedtime < too_short
+                ttpcheck = 'Error: ttp is too short'
             else
                 ttpcheck = 'No errors!'
                 ttp = extrapolatedtime
             end
-        elseif params(2) > 0
-            % If fit suggests increasing values over time
-            ttpcheck = 'Error: non-negative fit'
-            ttp = extrapolatedtime
         else
-            % handles the case where param 2 is exaclty 0
             ttpcheck = 'Error: non-negative fit'
             ttp = extrapolatedtime
         end
