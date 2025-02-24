@@ -763,10 +763,8 @@ end
 return
 %-EF#3
 
-
 %-EF#4
 DissolutionTime(RData)
-
 DissolutionTime = evalin('base', 'DissolutionTime');
 if DissolutionTime
     PData = evalin('base', 'PData');
@@ -776,17 +774,14 @@ if DissolutionTime
     P = evalin('base', 'P');
     TW = evalin('base', 'TW');
     Receive3 = evalin('base', 'Receive3');
-
     speedy_processing(RData, PData, Trans, TW, P, Receive3);
-    
 else 
     assignin('base','DissolutionTime', false);
-
     return
 end
-    
 return
 %-EF#4
+
 %% **** Callback routines used by UIControls (UI) ****
 
 function SensCutoffCallback(~, ~, UIValue)
