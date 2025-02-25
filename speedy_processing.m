@@ -2,27 +2,22 @@
 
 
 %%% ttp = time to next pulse
-function [ttp, ttpcheck]=speedy_processing(RData, PData, Trans, TW, P, Receive3);
+function ttp=speedy_processing(RData, PData, Trans, TW, P, Receive3);
 
-
-%% loading relevant data files
-
-%y = UFdata;
-
-%Trans = Zzz.Trans;
-%P = Zzz.P;
-%Receive3 = Zzz.Receive3;
+% initialize dictonary to store results
+persistent ttp_dict;
+if isempty(ttp_dict)
+    ttp_dict = {};  % A cell array to store {time, ttp} pairs
+end
 
 tw1 = TW(1);
-%tw1 = Zzz.tw1.Waveform;
 tw1 = tw1.Waveform;
 tw2 = load('C:\Users\verasonics\Documents\Vantage-4.5.3-2107301223\PME - UF seq img\Setup Data\SH_Chirp_2024March22.mat'); % loading synthetic waveform used for transmitting fundamental
-%tw2 = TW(2) come back and fix
 tw2 = tw2.TW.Waveform; % transmit waveform is in the TW structure 
-%tw2 = tw2.Waveform;
 
 % Length of data
 lenData = 10; %eventually dont hardcode this
+
 % sampling frequency of acquired RF data
 Fs = 250/18 * 1e6 ;
 tFs = 250e6; % Sampling frequency of synthetically generated waveform
@@ -64,9 +59,14 @@ for idx = 1:lenData
     intGS(idx) = sum(temp(tdx));
 end
 
-
 %%% c++ power law fit
-params = speedy_power_fit((1:lenData)', intGS'/intGS(1));
+
+% to display fit time and power law function in the command window:
+% params = speedy_power_fit((1:lenData)', intGS'/intGS(1));
+
+% to fit the power law without printing information:
+func = @() speedy_power_fit((1:lenData)', intGS'/intGS(1));
+[~, params] = evalc('func()');
 
 % Compute R^2 for the fit
 t = (1:lenData)';
@@ -78,10 +78,9 @@ R2 = 1 - (SS_res / SS_tot);
 
 % Initialize variables
 ttp = 0;
-ttpcheck = '';
 
 % Setting thresholds
-dissolved = 0.3;    % intensity at which bubble is declared dissolved
+dissolved = 0.5;    % intensity at which bubble is declared dissolved
 too_long = 100;     % time at which ttp is unreasonably long
 too_short = 1;      % time at which ttp is unsreasonably short
 min_R2 = 0.4;       % unacceptably low R^2
@@ -91,26 +90,28 @@ min_R2 = 0.4;       % unacceptably low R^2
 try
     extrapolatedtime = (dissolved / params(1))^(1 / params(2));
     if R2 < min_R2
-        ttpcheck = 'Error: poor fit';
-        ttp = extrapolatedtime;
+        ttp = 'Error: poor fit';
     else
         if params(2) < 0
             if extrapolatedtime > too_long
-                ttpcheck = 'Error: ttp is too long'
+                ttp = 'Error: ttp is too long';
             elseif extrapolatedtime < too_short
-                ttpcheck = 'Error: ttp is too short'
+                ttp = 'Error: ttp is too short';
             else
-                ttpcheck = 'No errors!'
-                ttp = extrapolatedtime
+                ttp = extrapolatedtime;
             end
         else
-            ttpcheck = 'Error: non-negative fit'
-            ttp = extrapolatedtime
+            ttp = 'Error: non-negative fit'
         end
     end
 catch
     % Handle any errors during fitting or calculations
-    ttpcheck = 'Error: other'
-    ttp = extrapolatedtime
+    ttp = 'Error: other'
 end
 
+current_time = datetime('now', 'Format', 'HH:mm:ss.SSSSSS');
+ttp_dict(end+1,:) = {current_time, ttp};
+disp('Dictionary of [Time, ttp]:');
+disp(ttp_dict);
+
+end
