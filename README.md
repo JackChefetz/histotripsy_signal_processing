@@ -1,8 +1,12 @@
 # Histotripsy Signal Processing
 
-Lab Time with Muskan: Tuesdays 3-5pm
+Code for calculating histotripsy signal bubble dissolution time is kept here. 
 
-Meetings with Dr. Bader: Monday 4:30pm
+Contents:
+- `speedy_processing.m` is our MATLAB script which calculates bubble dissolution time.
+- `setup.m` files are various setup files run on the Verasonics system in lab.
+- `speedy_power_fit.cpp` is a C++ file called as a `mex` function in `speedy_processing.m`.
+- Fall and Winter data files include previous offline simulations and necessary data files. 
 
 # People
 
