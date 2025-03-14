@@ -13,7 +13,7 @@ tw2 = load(fullfile('Setup Data', 'SH_Chirp_2024March22.mat')); % loading synthe
 tw2 = tw2.TW.Waveform; % transmit waveform is in the TW structure 
 
 %filename = fullfile('Fall Data', 'UFData_Agarose_dataset_1.mat');
-filename = fullfile('Winter Data', 'UFData_TT_1_dataset_18.mat');
+filename = fullfile('Winter Data', 'UFData_TT_1_dataset_1.mat');
 y = load(filename);
 
 % sampling frequency of acquired RF data (For verasonics, if Recieve structure has 'sample mode' = 'NS200BW', then it means fs = 4*Trans_center_frequency.

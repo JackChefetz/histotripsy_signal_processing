@@ -12,8 +12,8 @@ tw1 = Zzz.TW(1).Waveform;
 tw2 = load(fullfile('Setup Data', 'SH_Chirp_2024March22.mat')); % loading synthetic waveform used for transmitting fundamental
 tw2 = tw2.TW.Waveform; % transmit waveform is in the TW structure 
 
-%filename = fullfile('Fall Data', 'UFData_Agarose_dataset_1.mat');
-filename = fullfile('Winter Data', 'UFData_TT_1_dataset_11.mat');
+filename = fullfile('Fall Data', 'UFData_Agarose_dataset_1.mat');
+%filename = fullfile('Winter Data', 'UFData_TT_1_dataset_1.mat');
 y = load(filename);
 
 % sampling frequency of acquired RF data (For verasonics, if Recieve structure has 'sample mode' = 'NS200BW', then it means fs = 4*Trans_center_frequency.
@@ -85,15 +85,16 @@ end
 
 % Now plot data
 figure(102)
-plot(1:10, intGS/intGS(1), '.', 'MarkerSize', 20)
-xlabel('Time (ms)')
-ylabel('Integrated Signal (AU)')
+plot(1:10, intGS/intGS(1), '.', 'MarkerSize', 27)
+xlabel('Time (ms)', 'FontSize', 18) % Increase font size
+ylabel('Integrated Signal (AU)', 'FontSize', 18)
+set(gca, 'FontSize', 15)
 
 % Maybe do power law
 [efit gof] = fit((1:10)', intGS'/intGS(1),'power1')
 
 hold on
-plot(1:10, feval(efit, 1:10), '--r')
+plot(1:10, feval(efit, 1:10), 'r-', 'LineWidth', 2)
 
 
 

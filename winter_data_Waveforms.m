@@ -93,14 +93,15 @@ for fileIdx = 1:length(dataFiles)
 
     % Plot integrated signal
     figure;
-    plot(1:lenData, intGS/intGS(1), '.', 'MarkerSize', 20)
-    xlabel('Time (ms)')
-    ylabel('Integrated Signal (AU)')
+    plot(1:lenData, intGS/intGS(1), '.', 'MarkerSize', 27)
+    xlabel('Time (ms)', 'FontSize', 18) % Increase font size
+    ylabel('Integrated Signal (AU)', 'FontSize', 18)
+    set(gca, 'FontSize', 15)
 
     % Fit power law
     [efit, gof] = fit((1:lenData)', intGS'/intGS(1), 'power1');
     hold on
-    plot(1:lenData, feval(efit, 1:lenData), '--r')
+    plot(1:lenData, feval(efit, 1:lenData), 'r-', 'LineWidth', 2)
 
     % Save the figure to the output directory
     saveas(gcf, fullfile(outputDir, sprintf('Fig_Integrated_Signal_%d.png', fileIdx)));
